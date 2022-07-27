@@ -13,9 +13,10 @@
 
 				<!-- Header -->
 					<header id="header">
-						<span class="avatar"><img src="{{url_for('static',filename='images/avatar.jpg')}}" alt="" /></span>
+						<span class="avatar">
+							<img src="{{url_for('static',filename='images/thumbs/dumbcatpfp.jpg')}}" alt="" /></span>
 
-            <h1>Description</h1>
+            <h1>{{bio}}</h1>
             <br>
             <!-- About me button -->
             <a href="#"><button style="color:white;width:40%" >More about me</button></a>
@@ -35,24 +36,32 @@
 
 						<!-- Thumbnails -->
 							<section class="thumbnails">
-                
+                <div>
+                      <a href=""> 
+                      
+                        <img src="{{image}}" alt="" />
+                        <h3>Caption... blah blah blah</h3> </a>
+                </div>
                 <div>
                       <a href="">
-                        <img src="static/images/thumbs/01.jpg" alt="" />
-                        <h3>Caption... blah blah blah</h3>
+                        <img src="static/images/thumbs/wtfcat.jpeg" alt="" />
+                        <h3>abdullah when always</h3>
                       </a>
-                
-                      <a href="">
-                        <img src="url_for('static',filename='images/thumbs/02.jpg')" alt="" />
-                        <h3>Caption... blah blah blah</h3>
-                      </a>
-                </div>    
+                </div> 
                 <div>
-                  <a href="">
-                        <img src="{{url_for('static',filename='images/thumbs/03.jpg')}}" alt="" />
-                        <h3>Caption... blah blah blah</h3>
-                      </a>
-                </div>  
+                      <a href=""> 
+                      
+                        <img src="static/images/thumbs/yescat.jpeg" alt="" />
+                        <h3>Caption... blah blah blah</h3> </a>
+                </div>
+              </section>
+      <section class="thumbnails">
+                	
+                		{%for key, value in post_data.items()%}
+                		<div><a href="">
+                		<img src="{{key}}" alt="" />
+                		<h3>{{value}}</h3></a></div>
+                		{%endfor%}
 
 							</section>
 
